@@ -2,17 +2,11 @@ const authService = ($window, $http, $q, API) => {
 
 	let user;
 
-	const signup = (userDetails) => {
-		return $http.post(`${API.url}/auth/signup`, userDetails)
-			.then(({data}) => {
-				user = data.user;
-			});
-	}
-
 	const login = (userDetails) => {
-		return $http.post(`${API.url}/auth/login`, userDetails)
+		return $http.post(`${API.url}/auth/local`, userDetails)
 			.then(({data}) => {
 				user = data.user;
+				console.log(user);
 			});
 	}
 
@@ -48,7 +42,7 @@ const authService = ($window, $http, $q, API) => {
 		}
 	}
 
-	return {signup, login, isAuth, getToken};
+	return {login, isAuth, getToken, saveToken};
 }
 
 authService.$inject = ['$window', '$http', '$q', 'API'];

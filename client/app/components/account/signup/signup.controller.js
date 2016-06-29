@@ -1,13 +1,18 @@
 class SignupController {
-	constructor (Auth) {
+	constructor (User) {
 		this.signupDetails = {};
+		this.User = User;
 	}
 
 	signup () {
-		console.log('signing up');
+		this.User.signup(this.signupDetails)
+			.then((user) => {
+
+			});
+			
 	}
 }
 
-SignupController.$inject = ['Auth'];
+SignupController.$inject = ['User'];
 
 export {SignupController};
