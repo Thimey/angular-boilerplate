@@ -1,4 +1,4 @@
-class LoginController {
+class loginController {
 	constructor (Auth) {
 		this.message = 'login controller!';
 	}
@@ -8,6 +8,6 @@ class LoginController {
 	}
 }
 
-LoginController.$inject = ['Auth'];
+loginController.$inject = ['Auth'];
 
-export {LoginController};
+export {loginController};

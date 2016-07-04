@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var webpack = require('webpack-stream');
 var browser = require('browser-sync');
 var sync    = require('run-sequence');
-
 // map paths
 var paths = {
 	entry: 'client/app/app.js',

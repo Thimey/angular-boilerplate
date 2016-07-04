@@ -1,4 +1,4 @@
-import {LoginController as controller} from './login.controller';
+import {loginController as controller} from './login.controller';
 import template from './login.html';
 
 const loginDirective = () => {

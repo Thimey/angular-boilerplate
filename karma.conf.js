@@ -35,7 +35,6 @@ module.exports = function(config) {
         module: {
             loaders: [
                 /* add the appropriate loaders */
-                /* almost the same as the webpack.config */
                 { test: /\.html$/, loader: 'raw' },
                 { test: /\.less$/, loader: 'style!css!less' },
                 { test: /\.css/, loader: 'style!css' },
